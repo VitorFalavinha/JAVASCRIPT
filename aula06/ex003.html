@@ -11,19 +11,18 @@
         }
         h1 {
             color: red;
-        }
+        } /* comentário em CSS*/
     </style>
 
 </head>
 <body>
-    <h1>Hello, world!</h1>
+    <h1>Hello, world!</h1> <!--comentario em HTML-->
     <p>Me livrei da maldição.</p>
     <script>
-        
-        window.alert('Este é meu primeiro comando JS')//pop-up com mensagem
-        window.confirm ('Está gostando dessa experiência?')//pop-up com confirmação SIM ou NÃO
-        //pop
-        window.prompt ('Qual seu nome?') //pop-up com campo de digitação
+        var n1 = Number.parseInt(window.prompt('Digite um número'))
+        var n2 = Number.parseInt(window.prompt('Digite outro número'))
+        var s = n1 + n2 
+        window.alert(`A soma de ${n1} e ${n2} é igual a ${s}`)
     </script> 
 </body>
 </html>
