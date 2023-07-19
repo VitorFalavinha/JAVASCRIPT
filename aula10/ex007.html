@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Somando números</title>
+    <title>Mega Calculadora</title>
     <style>
         * {
             margin: 0px;
@@ -19,7 +19,8 @@
             
         }
         h1 {
-            color: white;
+            color: rgb(236, 235, 241);
+            text-shadow: 2px 2px 3px #1b2b4e;
         }
         form {
             padding: 15px;
@@ -44,13 +45,19 @@
             color: rgb(235, 235, 235);
             background-color: #35a1ff;
             box-shadow: -2px -3px 2px #3c0bad inset;
+            border: none;
         }
         input.botao:hover {
             background-color: #426fd1;
             transform: translate(2px, 2px);
+            box-shadow: 2px -2px 4px #1b2b4e;
+            
+        }
+        input#limpar {
+            background-color: rgb(255, 60, 60);
         }
         input#limpar:hover {
-            background-color: rgb(248, 75, 75);
+            background-color: rgb(224, 3, 3);
             transform: translate(2px, 2px);
         }
         div#res {
@@ -60,10 +67,12 @@
             margin: auto;
             border: 6px groove #35a1ff;
             width: 47vw;
-            height: 50px;
+            min-height: 50px;
+            max-height: fit-content;
             color: white;
             border-radius: 5px;
             background-color: #426fd1;
+            box-shadow: 2px 2px 4px #1b2b4e;
             
             
         }
@@ -82,13 +91,14 @@
         <input class="botao" type="button" value="Multiplicar" onclick="multiplicar()">
         <input class="botao" type="button" value="Dividir" onclick="dividir()">
         <input id="limpar" class="botao" type="reset" value="Limpar">
-        <div id="res" ondblclick="limpar()">Resultado</div>
+        <div id="res" onclick="limpar()">Resultado</div>
     </form>
     
 
     <script>
         function limpar(){
-            
+            var res = window.document.getElementById('res')
+            res.innerText = "Insira novos números"
 
         }
         function somar(){
@@ -98,7 +108,8 @@
             var n1 = Number(tn1.value)
             var n2 = Number(tn2.value)
             var s = n1 + n2
-            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`   
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>. 
+            <br> Para calcular novamente clique aqui e aperte o botão "Limpar"`   
         }
         function subtrair(){
             var tn1 = document.querySelector('input#itxtn1')
@@ -107,7 +118,8 @@
             var n1 = Number(tn1.value)
             var n2 = Number(tn2.value)
             var s = n1 - n2
-            res.innerHTML = `A subtração entre ${n1} e ${n2} é igual a <strong>${s}</strong>`   
+            res.innerHTML = `A subtração entre ${n1} e ${n2} é igual a <strong>${s}</strong>. 
+            <br> Para calcular novamente clique aqui e aperte o botão "Limpar"`   
         }
         function multiplicar(){
             var tn1 = document.querySelector('input#itxtn1')
@@ -116,7 +128,8 @@
             var n1 = Number(tn1.value)
             var n2 = Number(tn2.value)
             var s = n1 * n2
-            res.innerHTML = `A multiplicação entre ${n1} e ${n2} é igual a <strong>${s}</strong>`   
+            res.innerHTML = `A multiplicação entre ${n1} e ${n2} é igual a <strong>${s}</strong>.
+            <br> Para calcular novamente clique aqui e aperte o botão "Limpar"`   
         }
         function dividir(){
             var tn1 = document.querySelector('input#itxtn1')
@@ -125,7 +138,8 @@
             var n1 = Number(tn1.value)
             var n2 = Number(tn2.value)
             var s = n1 / n2
-            res.innerHTML = `A divisão entre ${n1} e ${n2} é igual a <strong>${s}</strong>`   
+            res.innerHTML = `A divisão entre ${n1} e ${n2} é igual a <strong>${s}</strong>.
+            <br> Para calcular novamente clique aqui e aperte o botão "Limpar"`   
         }
 
     </script>
