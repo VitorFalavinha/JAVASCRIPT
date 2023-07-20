@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+</head>
+
+<body>
+    <h1>Digite o país que você está e diremos se você é estrangeiro ou brasileiro</h1>
+
+    <label for="ipais">Digite o país</label>
+    <input type="text" name='pais' id="ipais">
+    <input type="button" value="Verificar" onclick="verif()">
+    <div id="res">
+
+    </div>
+
+    <script>
+
+        function verif() {
+            var pais = document.querySelector('input#ipais')
+            var res = document.querySelector('div#res')
+            var ipais = String(pais.value)
+
+            res.innerHTML = `<p>Seu país é ${ipais}</p>`
+
+            if (ipais === 'Brasil') {
+                res.innerHTML += `<p>Você é BRASILEIRO(A)</p>`
+            } else {
+                res.innerHTML += `<p>Você é GRINGO(A)</p>`
+            }
+
+        }   
+    </script>
+
+</body>
+
+</html>
