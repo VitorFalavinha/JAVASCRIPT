@@ -28,7 +28,7 @@ div#contReg {
 div.blocos {
     display: inline-block;
     border: 2px solid black;
-    padding: 18px;
+    padding: 10px;
     border-radius: 10px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-color: aliceblue;
