@@ -1,7 +1,7 @@
-var país = 'EUA'
+var país = 'USA'
 console.log(`Vivendo em ${país}`)
-if (país== 'Brasil') {
-    console.log(`Você é rasileiro(a)`)
+if (país == 'Brasil') {
+    console.log(`Você é brasileiro(a)`)
 }else {
-    console.log(`Você é strangeiro(a)`)
+    console.log(`Você é estrangeiro(a)`)
 }
