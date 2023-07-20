@@ -7,7 +7,7 @@
  body {
     background-color: black;
     margin-top:10vh;
-    margin-left: 7vw ;
+    margin-left: 2vw ;
     color: white;
     text-align: left;
     
@@ -17,7 +17,7 @@ div#contReg {
     padding: 15px;
     display: block;
     height: 14vh ;
-    width: 80vw ;
+    width: 90vw ;
     text-align: center;
     border-radius: 10px;
     background-image: linear-gradient(to bottom, rgb(142, 142, 240), rgb(119, 119, 170));
