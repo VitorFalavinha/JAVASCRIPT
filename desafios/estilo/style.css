@@ -28,7 +28,6 @@ div#contReg {
 div.blocos {
     display: inline-block;
     border: 2px solid black;
-    margin: 10px 1px 10px 10px;
     padding: 18px;
     border-radius: 10px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -37,6 +36,7 @@ div.blocos {
     
 }
 div#ferias {
+    margin-top: 10px;
     padding-top: 25px;
     padding-bottom: 25px;
     text-align: center;
