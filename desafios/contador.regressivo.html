@@ -47,9 +47,15 @@
 
             if (horas == 0 && minutos == 0 && segundos == 0 || segundos < 0){ 
                 clearInterval(countdown); 
-                 document.getElementById('ferias').innerHTML = 'JÁ É FÉRIAS!!!!!  <br>  <img src="imagens/ferias.png" alt="">' 
-            }
+                document.getElementById('dias').innerHTML = `0`
+                document.getElementById('horas').innerHTML = `0`
+                document.getElementById('minutos').innerHTML = `0`
+                document.getElementById('segundos').innerHTML = `0`
 
+                 document.getElementById('ferias').innerHTML = 'JÁ É FÉRIAS!!!!!  <br>  <img src="imagens/ferias.png" alt="">' 
+                 
+            }
+        
         }, 1000);
           
 
