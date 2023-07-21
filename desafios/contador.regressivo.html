@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="estilo/style.css">
 </head>
 <body>
+    
     <h1>Countdown de férias do Xô</h1>
     <div id="contReg">
         <div id="dias" class="blocos"></div> Dias 
@@ -16,11 +17,13 @@
         <div id="ferias"></div>
     </div>
     <script>
-        var dataFutura = new Date("July 21, 2023 18:00").getTime()
+        var dataFutura = new Date("July 21, 2023 18:00:00").getTime()
         console.log(dataFutura)
         var dias, horas, minutos, segundos
 
-        setInterval(function(){
+      
+
+        var countdown = setInterval(function(){
             var dataAtual = new Date().getTime();
             
             var segundosTotal = (dataFutura - dataAtual)/1000
@@ -40,8 +43,11 @@
             document.getElementById('minutos').innerHTML = minutos
             document.getElementById('segundos').innerHTML = segundos
 
-            if (segundos < 0){    
-                 document.getElementById('ferias').innerHTML = 'AGORA É FÉRIAS!!!!!  <br> &#x1F3DD'
+           
+
+            if (horas == 0 && minutos == 0 && segundos == 0 || segundos < 0){ 
+                clearInterval(countdown); 
+                 document.getElementById('ferias').innerHTML = 'JÁ É FÉRIAS!!!!!  <br>  <img src="imagens/ferias.png" alt="">' 
             }
 
         }, 1000);
