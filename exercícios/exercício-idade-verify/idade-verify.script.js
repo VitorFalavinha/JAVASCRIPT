@@ -44,6 +44,7 @@ function verificar(){
     img.style.borderRadius = '25px'
     img.style.marginTop = '15px'
     img.style.boxShadow = '2px 2px 10px white'
+    img.style.boxSizing = 'content-box'
     res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
     res.appendChild(img)
 }

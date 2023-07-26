@@ -4,6 +4,7 @@ body {
     background-color: #a7a7ff;
     font: normal 1em;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    
 
 
 }
@@ -24,12 +25,14 @@ section {
     width: 500px;
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.452);
+    
 
 
 }
 div#res {
     padding: 10px;
     font-size: 1.3em;
+    display: block;
 }
 
 footer {
